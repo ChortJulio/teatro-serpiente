@@ -1,48 +1,37 @@
-# Astro Starter Kit: Basics
+<a name="readme-top"></a>
 
-```sh
-npm create astro@latest -- --template basics
-```
+# Teatro Serpiente - Landing Page
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+> ¡Cambiá la piel!
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<div align="center">
+ <a href="https://www.instagram.com/teatroserpiente/">
+    <img src="public/assets/logo.webp" alt="Instagram del Teatro Serpiente" width="400" height="400" >
+  </a>
+  
+![Astro Badge](https://img.shields.io/badge/Astro-FF3E00?logo=astro&logoColor=fff&style=flat)
+![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
+![GitHub stars](https://img.shields.io/github/stars/ChortJulio/TeatroSerpiente)
+![GitHub PRs](https://img.shields.io/github/issues-pr/ChortJulio/TeatroSerpiente)
+![GitHub forks](https://img.shields.io/github/forks/ChortJulio/TeatroSerpiente)
+![GitHub issues](https://img.shields.io/github/issues/ChortJulio/TeatroSerpiente)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+[Reportar error](https://github.com/ChortJulio/TeatroSerpiente/issues) · [Ver Instagram](https://www.instagram.com/teatroserpiente/)
 
-## 🚀 Project Structure
+</div>
 
-Inside of your Astro project, you'll see the following folders and files:
+Este repositorio contiene el código fuente de la landing page de **Teatro Serpiente**, un teatro independiente de la ciudad de Santa Fe.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🎭 Actuación para jóvenes, adolescentes y pre-adolescentes
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+**Teatro Serpiente** es un espacio de creación y formación teatral que se dedica a la producción de espectáculos para jóvenes, adolescentes y pre-adolescentes. La propuesta artística de **Teatro Serpiente** se caracteriza por la búsqueda de un lenguaje propio y la experimentación con distintas formas de narración.
 
-## 🧞 Commands
+## 🫂 Contribuidores
 
-All commands are run from the root of the project, from a terminal:
+<a href="https://github.com/ChortJulio/TeatroSerpiente/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ChortJulio/TeatroSerpiente" />
+</a>
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 📚 Directora del teatro
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Lic.** Chort, Nicole

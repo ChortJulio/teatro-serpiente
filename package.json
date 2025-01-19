@@ -9,6 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.7"
+    "@astrojs/tailwind": "^5.1.4",
+    "@fontsource-variable/big-shoulders-text": "^5.1.1",
+    "@fontsource/poiret-one": "^5.1.1",
+    "astro": "^5.1.7",
+    "tailwindcss": "^3.4.17"
   }
 }

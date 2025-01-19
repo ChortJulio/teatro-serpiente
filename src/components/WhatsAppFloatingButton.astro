@@ -1,0 +1,29 @@
+---
+import WhatsApp from "@icons/WhatsApp.astro";
+---
+
+<a
+  href="https://wa.me/+5493425911295"
+  class="whatsapp-float transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <WhatsApp />
+</a>
+
+<style scoped>
+  .whatsapp-float {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 50px;
+    text-align: center;
+    z-index: 100;
+  }
+  .whatsapp-float img {
+    width: 100%;
+    height: auto;
+  }
+</style>

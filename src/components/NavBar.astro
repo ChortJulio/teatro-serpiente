@@ -1,0 +1,54 @@
+---
+import HeaderLink from "@components/HeaderLink.astro";
+
+import MenuIcon from "@icons/Menu.astro";
+import CloseIcon from "@icons/Close.astro";
+import Logo from "./Logo.astro";
+---
+
+<header
+  id="header-nav"
+  class="fixed top-0 w-full px-6 py-4 z-50 bg-black_primary/40"
+  style="backdrop-filter: blur(2px);"
+>
+  <div class="max-w-7xl mx-auto flex items-center justify-between gap-16">
+    <HeaderLink
+      checkActive={false}
+      href="/"
+      class="relative z-10"
+      aria-label="Logo"
+    >
+      <a
+        href="https://www.instagram.com/teatroserpiente/"
+        class="text-white hover:scale-125 duration-300 blur-sm opacity-0 transition-opacity hover:opacity-100"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Logo class="absolute w-10 m-auto" />
+      </a>
+      <a
+        href="https://www.instagram.com/teatroserpiente/"
+        class="text-white hover:scale-125 duration-300"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Logo class="w-20 rounded-full" />
+      </a>
+
+      <nav
+        id="header-menu"
+        class="fixed w-full h-dvh inset-0 bg-black_primary/70 md:text-xl lg:text-xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial]"
+      >
+        <HeaderLink href="#">Principal</HeaderLink>
+        <!-- <HeaderLink href="#quienes_somos">¿Quiénes somos?</HeaderLink> -->
+        <!-- <HeaderLink href="#fotos">Fotos</HeaderLink> -->
+        <!-- <HeaderLink href="#horarios">Horarios</HeaderLink> -->
+        <HeaderLink href="#contacto">Contacto</HeaderLink>
+        <a href="#header-nav" class="md:hidden absolute top-6 right-6">
+          <CloseIcon />
+        </a>
+      </nav>
+      <a href="#header-menu" class="md:hidden"><MenuIcon /></a>
+    </HeaderLink>
+  </div>
+</header>

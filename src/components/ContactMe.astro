@@ -1,0 +1,124 @@
+<div id="contacto" class="anchor-div-navbar"></div>
+<section class="my-6 pt-32">
+  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
+    <h1
+      class="text-4xl font-semibold text-center text-wrap mx-auto mb-2 tracking-wide uppercase"
+    >
+      ¡Contactanos!
+    </h1>
+    <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+      <div
+        class="rounded-lg bg-black/60 p-8 shadow-lg lg:col-span-3 lg:p-12 lg:col-start-2"
+      >
+        <form action="#" class="space-y-4">
+          <div>
+            <label class="sr-only" for="name">Nombre</label>
+            <input
+              class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
+              placeholder="Nombre"
+              type="text"
+              id="name"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label class="sr-only" for="email">Correo electrónico</label>
+              <input
+                class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
+                placeholder="Correo electrónico"
+                type="email"
+                id="email"
+              />
+            </div>
+
+            <div>
+              <label class="sr-only" for="phone">Número de teléfono</label>
+              <input
+                class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
+                placeholder="Número de teléfono"
+                type="tel"
+                id="phone"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
+            <div>
+              <label
+                for="ninio"
+                class="block w-full cursor-pointer rounded-lg border p-3 bg-gray-400/50 text-white/90 font-bold hover:scale-110 hover:border-yellow_primary has-[:checked]:border-l-yellow_primary has-[:checked]:bg-yellow_primary has-[:checked]:text-black transition-all duration-300"
+                tabindex="0"
+              >
+                <input
+                  class="sr-only"
+                  id="ninio"
+                  type="radio"
+                  tabindex="-1"
+                  name="option"
+                />
+
+                <span class="text-sm">Niño</span>
+              </label>
+            </div>
+
+            <div>
+              <label
+                for="adolescente"
+                class="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 bg-gray-400/50 font-bold text-white/90 hover:scale-110 hover:border-yellow_primary has-[:checked]:border-l-yellow_primary has-[:checked]:bg-yellow_primary has-[:checked]:text-black transition-all duration-300"
+                tabindex="0"
+              >
+                <input
+                  class="sr-only"
+                  id="adolescente"
+                  type="radio"
+                  tabindex="-1"
+                  name="option"
+                />
+
+                <span class="text-sm">Adolescente</span>
+              </label>
+            </div>
+
+            <div>
+              <label
+                for="adulto"
+                class="block w-full cursor-pointer rounded-lg border p-3 bg-gray-400/50 text-white/90 font-bold hover:scale-110 hover:border-yellow_primary has-[:checked]:border-l-yellow_primary has-[:checked]:bg-yellow_primary has-[:checked]:text-black transition-all duration-300"
+                tabindex="0"
+              >
+                <input
+                  class="sr-only"
+                  id="adulto"
+                  type="radio"
+                  tabindex="-1"
+                  name="option"
+                />
+
+                <span class="text-sm">Adulto</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="sr-only" for="message">Mensaje</label>
+
+            <textarea
+              class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
+              placeholder="Mensaje"
+              rows="8"
+              id="message"></textarea>
+          </div>
+
+          <div class="mt-4">
+            <button
+              type="submit"
+              class="inline-block w-full rounded-lg px-5 py-3 font-medium sm:w-auto bg-yellow_primary/80 hover:bg-yellow_primary text-black hover:scale-110 transition-all duration-300"
+            >
+              Enviar consulta
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

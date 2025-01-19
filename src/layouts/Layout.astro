@@ -1,22 +1,40 @@
+---
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import NavBar from "@components/NavBar.astro";
+import "@fontsource-variable/big-shoulders-text";
+import "@fontsource/poiret-one";
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta name="description" content="Teatro de la ciudad de Santa Fe" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/webp" href="/assets/logo.webp" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Teatro Serpiente - Cambiá la piel</title>
+  </head>
+  <body>
+    <NavBar />
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  :root {
+    color-scheme: dark;
+    --entry-animation: -20px;
+    --cover-animation: 20px;
+  }
+  body {
+    background-color: black;
+    color: yellow;
+    font-family: "Big Shoulders Text Variable", sans-serif;
+  }
 </style>
