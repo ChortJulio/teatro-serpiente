@@ -26,7 +26,7 @@ Este repositorio contiene el código fuente de la landing page de **Teatro Serpi
 
 **Teatro Serpiente** es un espacio de creación y formación teatral que se dedica a la producción de espectáculos para jóvenes, adolescentes y pre-adolescentes. La propuesta artística de **Teatro Serpiente** se caracteriza por la búsqueda de un lenguaje propio y la experimentación con distintas formas de narración.
 
-## 🫂 Contribuidores
+## 🤝 Contribuidores
 
 <a href="https://github.com/ChortJulio/teatro-serpiente/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ChortJulio/teatro-serpiente" />
