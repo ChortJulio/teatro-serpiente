@@ -11,12 +11,12 @@
   
 ![Astro Badge](https://img.shields.io/badge/Astro-FF3E00?logo=astro&logoColor=fff&style=flat)
 ![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
-![GitHub stars](https://img.shields.io/github/stars/ChortJulio/TeatroSerpiente)
-![GitHub PRs](https://img.shields.io/github/issues-pr/ChortJulio/TeatroSerpiente)
-![GitHub forks](https://img.shields.io/github/forks/ChortJulio/TeatroSerpiente)
-![GitHub issues](https://img.shields.io/github/issues/ChortJulio/TeatroSerpiente)
+![GitHub stars](https://img.shields.io/github/stars/ChortJulio/teatro-serpiente)
+![GitHub PRs](https://img.shields.io/github/issues-pr/ChortJulio/teatro-serpiente)
+![GitHub forks](https://img.shields.io/github/forks/ChortJulio/teatro-serpiente)
+![GitHub issues](https://img.shields.io/github/issues/ChortJulio/teatro-serpiente)
 
-[Reportar error](https://github.com/ChortJulio/TeatroSerpiente/issues) · [Ver Instagram](https://www.instagram.com/teatroserpiente/)
+[Reportar error](https://github.com/ChortJulio/teatro-serpiente/issues) · [Ver Instagram](https://www.instagram.com/teatroserpiente/)
 
 </div>
 
@@ -28,8 +28,8 @@ Este repositorio contiene el código fuente de la landing page de **Teatro Serpi
 
 ## 🫂 Contribuidores
 
-<a href="https://github.com/ChortJulio/TeatroSerpiente/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ChortJulio/TeatroSerpiente" />
+<a href="https://github.com/ChortJulio/teatro-serpiente/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ChortJulio/teatro-serpiente" />
 </a>
 
 ## 📚 Directora del teatro
