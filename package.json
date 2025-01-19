@@ -13,6 +13,7 @@
     "@fontsource-variable/big-shoulders-text": "^5.1.1",
     "@fontsource/poiret-one": "^5.1.1",
     "astro": "^5.1.7",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.4.17"
   }
 }
