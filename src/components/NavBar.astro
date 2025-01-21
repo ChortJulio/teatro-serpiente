@@ -39,11 +39,21 @@ import Logo from "./Logo.astro";
         id="header-menu"
         class="fixed w-full h-dvh inset-0 bg-black_primary/70 md:text-xl lg:text-xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-500 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial]"
       >
-        <HeaderLink href="#">Principal</HeaderLink>
-        <HeaderLink href="#about-us">Quiénes somos</HeaderLink>
-        <HeaderLink href="#workshops">Talleres</HeaderLink>
-        <HeaderLink href="#inscriptions">Inscripciones</HeaderLink>
-        <HeaderLink href="#contact-form">Contacto</HeaderLink>
+        <HeaderLink href="#"
+          ><span class="md:hidden">• </span>Principal</HeaderLink
+        >
+        <HeaderLink href="#about-us"
+          ><span class="md:hidden">• </span>Quiénes somos</HeaderLink
+        >
+        <HeaderLink href="#workshops"
+          ><span class="md:hidden">• </span>Talleres</HeaderLink
+        >
+        <HeaderLink href="#inscriptions"
+          ><span class="md:hidden">• </span>Inscripciones</HeaderLink
+        >
+        <HeaderLink href="#contact-form"
+          ><span class="md:hidden">• </span>Contacto</HeaderLink
+        >
         <a href="#header-nav" class="md:hidden absolute top-6 right-6">
           <CloseIcon />
         </a>

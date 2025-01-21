@@ -11,14 +11,25 @@
           class="rounded-lg bg-black/60 p-8 shadow-lg lg:col-span-3 lg:p-12 lg:col-start-2"
         >
           <form action="#" class="space-y-4">
-            <div>
-              <label class="sr-only" for="name">Nombre y apellido</label>
-              <input
-                class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
-                placeholder="Nombre y apellido"
-                type="text"
-                id="name"
-              />
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div class="sm:col-span-2">
+                <label class="sr-only" for="name">Nombre y apellido</label>
+                <input
+                  class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
+                  placeholder="Nombre y apellido *"
+                  type="text"
+                  id="name"
+                />
+              </div>
+              <div>
+                <label class="sr-only" for="age">Edad</label>
+                <input
+                  class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
+                  placeholder="Edad *"
+                  type="number"
+                  id="age"
+                />
+              </div>
             </div>
 
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -26,7 +37,7 @@
                 <label class="sr-only" for="email">Correo electrónico</label>
                 <input
                   class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
-                  placeholder="Correo electrónico"
+                  placeholder="Correo electrónico *"
                   type="email"
                   id="email"
                 />
@@ -36,67 +47,23 @@
                 <label class="sr-only" for="phone">Número de teléfono</label>
                 <input
                   class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
-                  placeholder="Número de teléfono"
+                  placeholder="Número de teléfono *"
                   type="tel"
                   id="phone"
                 />
               </div>
             </div>
 
-            <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
-              <div>
-                <label
-                  for="ninio"
-                  class="block w-full cursor-pointer rounded-lg border p-3 bg-gray-400/50 text-white/90 font-bold hover:scale-110 hover:border-yellow_primary has-[:checked]:border-l-yellow_primary has-[:checked]:bg-yellow_primary has-[:checked]:text-black transition-all duration-500"
-                  tabindex="0"
-                >
-                  <input
-                    class="sr-only"
-                    id="ninio"
-                    type="radio"
-                    tabindex="-1"
-                    name="option"
-                  />
-
-                  <span class="text-sm">Niño</span>
-                </label>
-              </div>
-
-              <div>
-                <label
-                  for="adolescente"
-                  class="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 bg-gray-400/50 font-bold text-white/90 hover:scale-110 hover:border-yellow_primary has-[:checked]:border-l-yellow_primary has-[:checked]:bg-yellow_primary has-[:checked]:text-black transition-all duration-500"
-                  tabindex="0"
-                >
-                  <input
-                    class="sr-only"
-                    id="adolescente"
-                    type="radio"
-                    tabindex="-1"
-                    name="option"
-                  />
-
-                  <span class="text-sm">Adolescente</span>
-                </label>
-              </div>
-
-              <div>
-                <label
-                  for="adulto"
-                  class="block w-full cursor-pointer rounded-lg border p-3 bg-gray-400/50 text-white/90 font-bold hover:scale-110 hover:border-yellow_primary has-[:checked]:border-l-yellow_primary has-[:checked]:bg-yellow_primary has-[:checked]:text-black transition-all duration-500"
-                  tabindex="0"
-                >
-                  <input
-                    class="sr-only"
-                    id="adulto"
-                    type="radio"
-                    tabindex="-1"
-                    name="option"
-                  />
-
-                  <span class="text-sm">Adulto</span>
-                </label>
-              </div>
+            <div>
+              <label class="sr-only" for="experience"
+                >¿Realizaste teatro anteriormente o sería tu primera vez?</label
+              >
+              <input
+                class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
+                placeholder="¿Realizaste teatro anteriormente o sería tu primera vez? *"
+                type="text"
+                id="experience"
+              />
             </div>
 
             <div>
@@ -104,7 +71,7 @@
 
               <textarea
                 class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
-                placeholder="Mensaje"
+                placeholder="Mensaje (opcional)"
                 rows="8"
                 id="message"></textarea>
             </div>
