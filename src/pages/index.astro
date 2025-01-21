@@ -1,15 +1,21 @@
 ---
+import AboutUs from "@components/AboutUs.astro";
 import BentoGrid from "@components/BentoGrid.astro";
 import ContactMe from "@components/ContactMe.astro";
 import FAQs from "@components/FAQs.astro";
+import Inscriptions from "@components/Inscriptions.astro";
 import SocialProof from "@components/SocialProof.astro";
 import WhatsAppFloatingButton from "@components/WhatsAppFloatingButton.astro";
+import Workshops from "@components/Workshops.astro";
 import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="Teatro Serpiente - Cambiá la piel">
-  <BentoGrid />
+  <AboutUs />
+  <Inscriptions />
+  <Workshops />
   <ContactMe />
+  <BentoGrid />
   <SocialProof />
   <FAQs />
   <WhatsAppFloatingButton />
