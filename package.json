@@ -12,6 +12,7 @@
     "@astrojs/tailwind": "^5.1.4",
     "@fontsource-variable/big-shoulders-text": "^5.1.1",
     "@fontsource/poiret-one": "^5.1.1",
+    "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "astro": "^5.1.7",
     "sharp": "^0.33.5",

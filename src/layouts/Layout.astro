@@ -5,6 +5,7 @@ import NavBar from "@components/NavBar.astro";
 import "@fontsource-variable/big-shoulders-text";
 import "@fontsource/poiret-one";
 import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <!doctype html>
@@ -37,6 +38,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
     <main>
       <slot />
       <SpeedInsights />
+      <Analytics />
     </main>
     <Footer />
   </body>
