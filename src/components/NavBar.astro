@@ -2,63 +2,54 @@
 import HeaderLink from "@components/HeaderLink.astro";
 
 import MenuIcon from "@icons/Menu.astro";
-import CloseIcon from "@icons/Close.astro";
 import Logo from "./Logo.astro";
 ---
 
-<header
-  id="header-nav"
-  class="fixed top-0 w-full px-6 py-4 z-50 bg-black_primary/40"
-  style="backdrop-filter: blur(2px);"
->
-  <div class="max-w-7xl mx-auto flex items-center justify-between gap-16">
-    <HeaderLink
-      checkActive={false}
-      href="/"
-      class="relative z-10"
-      aria-label="Logo"
-    >
-      <a
-        href="https://www.instagram.com/teatroserpiente/"
-        class="text-white hover:scale-125 duration-500 blur-sm opacity-0 transition-opacity hover:opacity-100"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Logo class="absolute w-10 m-auto" />
-      </a>
-      <a
-        href="https://www.instagram.com/teatroserpiente/"
-        class="text-white hover:scale-125 duration-500"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Logo class="w-20 rounded-full" />
-      </a>
-
-      <nav
-        id="header-menu"
-        class="fixed w-full h-dvh inset-0 bg-black_primary/70 md:text-xl lg:text-xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-500 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial]"
-      >
-        <HeaderLink href="#"
-          ><span class="md:hidden">• </span>Principal</HeaderLink
-        >
-        <HeaderLink href="#about-us"
-          ><span class="md:hidden">• </span>Quiénes somos</HeaderLink
-        >
-        <HeaderLink href="#workshops"
-          ><span class="md:hidden">• </span>Talleres</HeaderLink
-        >
-        <HeaderLink href="#inscriptions"
-          ><span class="md:hidden">• </span>Inscripciones</HeaderLink
-        >
-        <HeaderLink href="#contact-form"
-          ><span class="md:hidden">• </span>Contacto</HeaderLink
-        >
-        <a href="#header-nav" class="md:hidden absolute top-6 right-6">
-          <CloseIcon />
-        </a>
-      </nav>
-      <a href="#header-menu" class="md:hidden"><MenuIcon /></a>
-    </HeaderLink>
+<nav class="top-0 w-full px-6 py-4 z-50 bg-black_primary/40 shadow-lg">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+      <div class="flex space-x-7">
+        <div>
+          <a
+            href="https://www.instagram.com/teatroserpiente/"
+            class="text-white hover:scale-125 duration-500"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Logo class="w-20 rounded-full" />
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center space-x-5">
+        <HeaderLink href="#">Principal</HeaderLink>
+        <HeaderLink href="#about-us">Quiénes somos</HeaderLink>
+        <HeaderLink href="#workshops">Talleres</HeaderLink>
+        <HeaderLink href="#inscriptions">Inscripciones</HeaderLink>
+        <HeaderLink href="#what-people-say">Qué dicen lxs viboritxs</HeaderLink>
+        <HeaderLink href="#contact-form">Contacto</HeaderLink>
+      </div>
+      <div class="md:hidden flex items-center">
+        <button class="outline-none mobile-menu-button">
+          <MenuIcon class="w-6 h-6 text-gray-600" />
+        </button>
+      </div>
+    </div>
   </div>
-</header>
+  <div class="flex flex-col items-center hidden mobile-menu text-lg">
+    <HeaderLink href="#">• Principal</HeaderLink>
+    <HeaderLink href="#about-us">• Quiénes somos</HeaderLink>
+    <HeaderLink href="#workshops">• Talleres</HeaderLink>
+    <HeaderLink href="#inscriptions">• Inscripciones</HeaderLink>
+    <HeaderLink href="#what-people-say">• Qué dicen lxs viboritxs</HeaderLink>
+    <HeaderLink href="#contact-form">• Contacto</HeaderLink>
+  </div>
+</nav>
+
+<script>
+  const btn = document.querySelector("button.mobile-menu-button");
+  const menu = document.querySelector(".mobile-menu");
+
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+  });
+</script>
