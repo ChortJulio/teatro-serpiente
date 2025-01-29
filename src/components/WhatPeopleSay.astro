@@ -1,0 +1,43 @@
+---
+import Testimonial from "@components/Testimonial.astro";
+
+const testimonials = [
+  {
+    image: "/assets/user_default.webp",
+    name: "Delfina",
+    age: 14,
+    comment: "Te amo Nicoleta",
+  },
+  {
+    image: "/assets/user_default.webp",
+    name: "Abril",
+    age: 18,
+    comment: "Es hermoso todo lo que trasmiten ❤️",
+  },
+  {
+    image: "/assets/user_default.webp",
+    name: "Valentino",
+    age: 16,
+    comment: "Esto es arte de verdad",
+  },
+];
+---
+
+<div id="what-people-say">
+  <section class="pt-32 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-screen-xl">
+      <h1
+        class="text-4xl font-semibold text-center text-wrap mx-auto tracking-wide uppercase"
+      >
+        Qué dicen lxs viboritxs
+      </h1>
+      <div class="flex flex-wrap justify-center my-4">
+        {
+          testimonials.map((testimonial) => (
+            <Testimonial testimonial={testimonial} />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</div>
