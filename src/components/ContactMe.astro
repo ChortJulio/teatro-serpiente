@@ -1,95 +1,154 @@
+---
+import CellphoneIcon from "@icons/Cellphone.astro";
+import EmailIcon from "@icons/Email.astro";
+import GPSIcon from "@icons/GPS.astro";
+import InstagramIcon from "@icons/Instagram.astro";
+---
+
 <div id="contact-form">
   <section class="pt-32">
-    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
+    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
       <h1
-        class="text-4xl font-semibold text-center text-wrap mx-auto mb-2 tracking-wide uppercase"
+        class="text-4xl font-semibold text-wrap mx-auto mb-8 tracking-wide uppercase text-center"
       >
         Contactanos
       </h1>
-      <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
-        <div
-          class="rounded-lg bg-black/60 p-8 shadow-lg lg:col-span-3 lg:p-12 lg:col-start-2"
-        >
-          <form action="#" class="space-y-4">
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-              <div class="sm:col-span-2">
-                <label class="sr-only" for="name">Nombre y apellido</label>
-                <input
-                  class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
-                  placeholder="Nombre y apellido *"
-                  type="text"
-                  id="name"
-                  required
-                />
-              </div>
-              <div>
-                <label class="sr-only" for="age">Edad</label>
-                <input
-                  class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
-                  placeholder="Edad *"
-                  type="number"
-                  id="age"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div>
-                <label class="sr-only" for="email">Correo electrónico</label>
-                <input
-                  class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
-                  placeholder="Correo electrónico *"
-                  type="email"
-                  id="email"
-                  required
-                />
-              </div>
-
-              <div>
-                <label class="sr-only" for="phone">Número de teléfono</label>
-                <input
-                  class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
-                  placeholder="Número de teléfono *"
-                  type="tel"
-                  id="phone"
-                  required
-                />
-              </div>
-            </div>
-
-            <div>
-              <label class="sr-only" for="experience"
-                >¿Realizaste teatro anteriormente o sería tu primera vez?</label
-              >
+      <div class="grid md:grid-cols-2 gap-12">
+        <form action="#" class="space-y-4">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div class="sm:col-span-2">
+              <label class="sr-only" for="name">Nombre y apellido</label>
               <input
                 class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
-                placeholder="¿Realizaste teatro anteriormente o sería tu primera vez? *"
+                placeholder="Nombre y apellido *"
                 type="text"
-                id="experience"
+                id="name"
+                required
+              />
+            </div>
+            <div>
+              <label class="sr-only" for="age">Edad</label>
+              <input
+                class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
+                placeholder="Edad *"
+                type="number"
+                id="age"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label class="sr-only" for="email">Correo electrónico</label>
+              <input
+                class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
+                placeholder="Correo electrónico *"
+                type="email"
+                id="email"
                 required
               />
             </div>
 
             <div>
-              <label class="sr-only" for="message">Mensaje</label>
-
-              <textarea
+              <label class="sr-only" for="phone">Número de teléfono</label>
+              <input
                 class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
-                placeholder="Mensaje (opcional)"
-                rows="8"
-                id="message"></textarea>
+                placeholder="Número de teléfono *"
+                type="tel"
+                id="phone"
+                required
+              />
             </div>
+          </div>
 
-            <div class="mt-4">
-              <button
-                type="submit"
-                class="inline-block w-full rounded-lg px-5 py-3 sm:w-auto bg-yellow_primary/80 hover:bg-yellow_primary text-black hover:scale-110 transition-all duration-500"
-              >
-                Enviar consulta
-              </button>
+          <div>
+            <label class="sr-only" for="experience"
+              >¿Realizaste teatro anteriormente o sería tu primera vez?</label
+            >
+            <input
+              class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
+              placeholder="¿Realizaste teatro anteriormente o sería tu primera vez? *"
+              type="text"
+              id="experience"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="sr-only" for="message">Mensaje</label>
+
+            <textarea
+              class="w-full rounded-lg p-3 bg-white focus:text-black text-black/70"
+              placeholder="Mensaje (opcional)"
+              rows="8"
+              id="message"></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="inline-block w-full rounded-lg px-5 py-3 bg-yellow_primary/80 hover:bg-yellow_primary text-black hover:scale-105 transition-all duration-500"
+          >
+            Enviar mensaje
+          </button>
+        </form>
+        <div class="flex flex-col justify-between">
+          <div>
+            <p class="mb-8 text-zinc-300">
+              ¿Tenés preguntas sobre nuestros talleres, actuaciones o
+              inscripciones? Nos encantaría saber sobre vos. Completá el
+              formulario o contactanos directamente utilizando la información a
+              continuación.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <GPSIcon />
+                <div>
+                  <h4 class="font-semibold">Dirección</h4>
+                  <p class="text-zinc-300">Santa Fe, Santa Fe, Argentina</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <EmailIcon />
+                <div>
+                  <h4 class="font-semibold">Email</h4>
+                  <a
+                    href="mailto:teatroserpiente@yopmail.com"
+                    class="transition duration-500 ease-in-out transform hover:underline hover:text-zinc-300"
+                  >
+                    <b class="text-zinc-300">teatroserpiente@yopmail.com</b>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <CellphoneIcon />
+                <div>
+                  <h4 class="font-semibold">Teléfono</h4>
+                  <a
+                    href="https://wa.me/+5493425911295"
+                    class="transition duration-500 ease-in-out transform hover:underline hover:text-zinc-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><b class="text-zinc-300">+54 342 5911295</b></a
+                  >
+                </div>
+              </div>
             </div>
-          </form>
+          </div>
+          <div class="mt-8">
+            <h4 class="font-semibold mb-4">Seguinos en Instagram!</h4>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.instagram.com/teatroserpiente/"
+                class="text-white hover:scale-125 duration-500"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InstagramIcon size="8" />
+                <span class="sr-only">Instagram</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

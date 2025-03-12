@@ -9,15 +9,20 @@ interface Testimonial {
 const testimonial: Testimonial = Astro.props.testimonial;
 ---
 
-<article class="border border-gray-300 p-4 pt-8 px-6 m-4 rounded-lg w-64">
-  <img
-    src={testimonial.image}
-    alt={testimonial.name}
-    class="rounded-full w-20 h-w-20 object-cover"
-  />
-  <div class="text-lg font-bold mt-2 text-white">
-    {testimonial.name}
-  </div>
-  <div class="text-gray-500 mb-4">{testimonial.age} años</div>
-  <div class="text-white">"{testimonial.comment}"</div>
+<article class="border border-gray-300 p-4 pt-8 px-6 m-4 rounded-lg">
+  <section class="flex items-center mb-4">
+    <img
+      src={testimonial.image}
+      alt={testimonial.name}
+      class="rounded-full w-12 h-w-12 object-cover"
+    />
+
+    <div class="ml-4">
+      <h4 class="text-lg font-bold mt-2 text-white">
+        {testimonial.name}
+      </h4>
+      <p class="text-gray-500 text-center">{testimonial.age} años</p>
+    </div>
+  </section>
+  <p class="text-white">"{testimonial.comment}"</p>
 </article>

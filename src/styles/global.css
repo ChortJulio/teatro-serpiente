@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --spotlight-size: 30vw;
+  }
+
+  body {
+    @apply bg-gradient-to-b from-stone-900 to-stone-800;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .noise-overlay {
+    @apply fixed inset-0 z-0 pointer-events-none opacity-[0.03];
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  .spotlight {
+    @apply relative overflow-hidden;
+  }
+
+  .spotlight::before {
+    content: "";
+    @apply absolute w-[var(--spotlight-size)] h-[var(--spotlight-size)] rounded-full;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.15) 0%, rgba(251, 191, 36, 0) 70%);
+    top: -50%;
+    left: -50%;
+    transform: translate(var(--x, 0), var(--y, 0));
+    pointer-events: none;
+  }
+
+  .stage-curtain {
+    @apply relative overflow-hidden;
+    background: linear-gradient(
+      to bottom,
+      rgba(120, 53, 15, 0.8),
+      rgba(120, 53, 15, 0.6) 30%,
+      rgba(120, 53, 15, 0.4) 60%,
+      rgba(120, 53, 15, 0.2) 80%,
+      transparent
+    );
+  }
+
+  .marquee {
+    @apply overflow-hidden whitespace-nowrap;
+  }
+
+  .marquee-content {
+    @apply inline-block animate-marquee;
+  }
+
+  .card-shadow {
+    box-shadow: 0 10px 30px -15px rgba(251, 191, 36, 0.2);
+  }
+
+  .bento-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+  }
+
+  .bento-item {
+    @apply bg-stone-800/50 backdrop-blur-sm rounded-lg overflow-hidden border border-amber-900/30 transition-all duration-300;
+  }
+
+  .bento-item:hover {
+    @apply border-amber-700/50 card-shadow;
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+
+  .font-playfair {
+    font-family: "Playfair Display", serif;
+  }
+
+  .font-raleway {
+    font-family: "Raleway", sans-serif;
+  }
+}
+
