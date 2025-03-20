@@ -1,0 +1,69 @@
+---
+import QuestionAnswer from "@components/QuestionAnswer.astro";
+import FAQ_questions from "@data/faq";
+---
+
+<header class="py-20 bg-black">
+  <div class="container mx-auto px-4">
+    <h1 class="text-4xl md:text-5xl font-bold text-center text-[#e9e70a]">
+      Preguntas Frecuentes
+    </h1>
+  </div>
+</header>
+
+<section class="py-12 bg-black">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <div class="space-y-8">
+      {
+        FAQ_questions.map((question, index) => (
+          <QuestionAnswer
+            question={question.question}
+            answer={question.answer}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="py-12 bg-black">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-2xl font-bold mb-6">¿Tenés más preguntas?</h2>
+    <p class="text-white mb-8 max-w-2xl mx-auto">
+      Si no encontraste la respuesta que buscabas, no dudes en contactarnos.
+      Estamos para ayudarte en tu aventura teatral.
+    </p>
+    <a
+      href="/#contact-form"
+      class="inline-block px-8 py-3 bg-[#e9e70a] text-black font-semibold rounded-md hover:bg-opacity-80 transition-colors"
+    >
+      Contáctanos
+    </a>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const faqToggles = document.querySelectorAll(".faq-toggle");
+    faqToggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        const content = toggle.nextElementSibling;
+        const icon = toggle.querySelector(".faq-icon");
+
+        content?.classList.toggle("hidden");
+        icon?.classList.toggle("rotate-180");
+
+        // Close other FAQs
+        faqToggles.forEach((otherToggle) => {
+          if (otherToggle !== toggle) {
+            const otherContent = otherToggle.nextElementSibling;
+            const otherIcon = otherToggle.querySelector(".faq-icon");
+
+            otherContent?.classList.add("hidden");
+            otherIcon?.classList.remove("rotate-180");
+          }
+        });
+      });
+    });
+  });
+</script>

@@ -1,0 +1,27 @@
+---
+const { question, answer } = Astro.props;
+---
+
+<div class="border border-[#e9e70a]/30 rounded-lg overflow-hidden">
+  <button
+    class="faq-toggle w-full flex justify-between items-center p-4 text-left focus:outline-none"
+  >
+    <span class="text-xl font-bold">{question}</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6 text-[#e9e70a] transform transition-transform faq-icon"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div class="text-white faq-content hidden px-4 pb-4">
+    <p>{answer}</p>
+  </div>
+</div>

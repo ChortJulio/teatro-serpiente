@@ -2,12 +2,13 @@
 import Logo from "@components/Logo.astro";
 import InstagramIcon from "@icons/Instagram.astro";
 import GitHubIcon from "@icons/GitHub.astro";
+import CONTACT_INFO from "@data/contactInfo";
 ---
 
 <footer class="bg-black/40 relative mb-5">
   <div class="p-4 pb-14 flex flex-col md:mb-0 items-center justify-center">
     <a
-      href="https://www.instagram.com/teatroserpiente/"
+      href={CONTACT_INFO.social.instagram}
       class="text-white hover:scale-125 duration-500"
       target="_blank"
       rel="noopener noreferrer"
@@ -18,7 +19,7 @@ import GitHubIcon from "@icons/GitHub.astro";
       Seguinos en nuestras redes
     </h2>
     <a
-      href="https://www.instagram.com/teatroserpiente/"
+      href={CONTACT_INFO.social.instagram}
       class="text-white hover:scale-125 duration-500"
       target="_blank"
       rel="noopener noreferrer"
@@ -29,7 +30,7 @@ import GitHubIcon from "@icons/GitHub.astro";
   </div>
   <div class="pl-4 -mt-5 left-0 flex flex-col items-start">
     <a
-      href="https://github.com/ChortJulio/teatro-serpiente"
+      href={CONTACT_INFO.social.github}
       class="text-white"
       target="_blank"
       rel="noopener noreferrer"

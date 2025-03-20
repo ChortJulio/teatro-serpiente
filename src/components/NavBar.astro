@@ -3,6 +3,7 @@ import HeaderLink from "@components/HeaderLink.astro";
 
 import MenuIcon from "@icons/Menu.astro";
 import Logo from "./Logo.astro";
+import CONTACT_INFO from "@data/contactInfo";
 ---
 
 <nav class="top-0 w-full px-6 py-4 z-50 bg-black_primary/40 shadow-lg">
@@ -10,7 +11,7 @@ import Logo from "./Logo.astro";
     <div class="flex justify-between">
       <div class="flex space-x-7">
         <a
-          href="https://www.instagram.com/teatroserpiente/"
+          href={CONTACT_INFO.social.instagram}
           class="text-white hover:scale-125 duration-500"
           target="_blank"
           rel="noopener noreferrer"
@@ -19,12 +20,15 @@ import Logo from "./Logo.astro";
         </a>
       </div>
       <div class="hidden md:flex items-center space-x-5 text-xl">
-        <HeaderLink href="#">Principal</HeaderLink>
-        <HeaderLink href="#about-us">Quiénes somos</HeaderLink>
-        <HeaderLink href="#workshops">Talleres</HeaderLink>
-        <HeaderLink href="#inscriptions">Inscripciones</HeaderLink>
-        <HeaderLink href="#what-people-say">Qué dicen lxs viboritxs</HeaderLink>
-        <HeaderLink href="#contact-form">Contacto</HeaderLink>
+        <HeaderLink href="/">Principal</HeaderLink>
+        <HeaderLink href="/#about-us">Quiénes somos</HeaderLink>
+        <HeaderLink href="/#workshops">Talleres</HeaderLink>
+        <HeaderLink href="/#inscriptions">Inscripciones</HeaderLink>
+        <HeaderLink href="/#what-people-say">Qué dicen lxs viboritxs</HeaderLink
+        >
+        <HeaderLink href="/#contact-form">Contacto</HeaderLink>
+        <HeaderLink href="/faq">FAQs</HeaderLink>
+        <HeaderLink href="/photos">Galería</HeaderLink>
       </div>
       <div class="md:hidden flex items-center">
         <button class="outline-none mobile-menu-button">
@@ -34,12 +38,14 @@ import Logo from "./Logo.astro";
     </div>
   </div>
   <div class="flex flex-col items-center hidden mobile-menu text-lg">
-    <HeaderLink href="#">• Principal</HeaderLink>
-    <HeaderLink href="#about-us">• Quiénes somos</HeaderLink>
-    <HeaderLink href="#workshops">• Talleres</HeaderLink>
-    <HeaderLink href="#inscriptions">• Inscripciones</HeaderLink>
-    <HeaderLink href="#what-people-say">• Qué dicen lxs viboritxs</HeaderLink>
-    <HeaderLink href="#contact-form">• Contacto</HeaderLink>
+    <HeaderLink href="/#">• Principal</HeaderLink>
+    <HeaderLink href="/#about-us">• Quiénes somos</HeaderLink>
+    <HeaderLink href="/#workshops">• Talleres</HeaderLink>
+    <HeaderLink href="/#inscriptions">• Inscripciones</HeaderLink>
+    <HeaderLink href="/#what-people-say">• Qué dicen lxs viboritxs</HeaderLink>
+    <HeaderLink href="/#contact-form">• Contacto</HeaderLink>
+    <HeaderLink href="/faq">• FAQs</HeaderLink>
+    <HeaderLink href="/photos">• Galería</HeaderLink>
   </div>
 </nav>
 

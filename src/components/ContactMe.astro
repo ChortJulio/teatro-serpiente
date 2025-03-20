@@ -1,4 +1,5 @@
 ---
+import CONTACT_INFO from "@data/contactInfo";
 import CellphoneIcon from "@icons/Cellphone.astro";
 import EmailIcon from "@icons/Email.astro";
 import GPSIcon from "@icons/GPS.astro";
@@ -105,7 +106,7 @@ import InstagramIcon from "@icons/Instagram.astro";
                 <GPSIcon />
                 <div>
                   <h4 class="font-semibold">Dirección</h4>
-                  <p class="text-zinc-300">Santa Fe, Santa Fe, Argentina</p>
+                  <p class="text-zinc-300">{CONTACT_INFO.address}</p>
                 </div>
               </div>
               <div class="flex items-start">
@@ -113,10 +114,10 @@ import InstagramIcon from "@icons/Instagram.astro";
                 <div>
                   <h4 class="font-semibold">Email</h4>
                   <a
-                    href="mailto:teatroserpiente@yopmail.com"
+                    href={`mailto:${CONTACT_INFO.email}`}
                     class="transition duration-500 ease-in-out transform hover:underline hover:text-zinc-300"
                   >
-                    <b class="text-zinc-300">teatroserpiente@yopmail.com</b>
+                    <b class="text-zinc-300">{CONTACT_INFO.email}</b>
                   </a>
                 </div>
               </div>
@@ -125,11 +126,13 @@ import InstagramIcon from "@icons/Instagram.astro";
                 <div>
                   <h4 class="font-semibold">Teléfono</h4>
                   <a
-                    href="https://wa.me/+5493425911295"
+                    href={`https://wa.me/${CONTACT_INFO.contact.whatsappNumber}`}
                     class="transition duration-500 ease-in-out transform hover:underline hover:text-zinc-300"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><b class="text-zinc-300">+54 342 5911295</b></a
+                    ><b class="text-zinc-300"
+                      >{CONTACT_INFO.contact.phoneNumber}</b
+                    ></a
                   >
                 </div>
               </div>
@@ -139,7 +142,7 @@ import InstagramIcon from "@icons/Instagram.astro";
             <h4 class="font-semibold mb-4">Seguinos en Instagram!</h4>
             <div class="flex space-x-4">
               <a
-                href="https://www.instagram.com/teatroserpiente/"
+                href={CONTACT_INFO.social.instagram}
                 class="text-white hover:scale-125 duration-500"
                 target="_blank"
                 rel="noopener noreferrer"

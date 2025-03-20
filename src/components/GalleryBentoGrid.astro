@@ -1,0 +1,169 @@
+---
+import type { GalleryItem } from "src/types/gallery";
+
+const { items } = Astro.props;
+
+const getSizeClasses = (size?: string) => {
+  switch (size) {
+    case "large":
+      return "md:col-span-2 md:row-span-2";
+    case "wide":
+      return "md:col-span-2";
+    case "tall":
+      return "md:row-span-2";
+    case "medium":
+      return "md:col-span-1 md:row-span-1";
+    default:
+      return "";
+  }
+};
+---
+
+<header class="py-20 bg-black">
+  <div class="container mx-auto px-4">
+    <h1 class="text-4xl md:text-5xl font-bold text-center text-[#e9e70a]">
+      Galería
+    </h1>
+    <p class="text-white text-center mt-4 max-w-2xl mx-auto">
+      Explora nuestra colección de imágenes de producciones pasadas, talleres y
+      eventos especiales.
+    </p>
+  </div>
+</header>
+
+<section class="py-8 bg-black">
+  <div class="container mx-auto px-4">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[minmax(200px,auto)]"
+    >
+      {
+        items.map((item: GalleryItem) => (
+          <div
+            class={`gallery-item ${getSizeClasses(item.size)}`}
+            data-category={item.category}
+          >
+            <div
+              class="relative overflow-hidden rounded-lg group cursor-pointer h-full gallery-item-inner"
+              data-id={item.id}
+              data-title={item.title}
+              data-date={item.date}
+              data-image={item.imageSrc}
+              data-alt={item.imageAlt}
+            >
+              <img
+                src={item.imageSrc || "/assets/placeholder.svg"}
+                alt={item.imageAlt}
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div class="text-center p-4">
+                  <h3 class="text-[#e9e70a] text-xl font-bold">{item.title}</h3>
+                  <p class="text-white">{item.date}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<div
+  id="gallery-modal"
+  class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4"
+>
+  <div class="relative max-w-4xl w-full">
+    <button
+      id="close-modal"
+      class="absolute -top-10 right-0 text-white hover:text-[#e9e70a]"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <img
+      id="modal-image"
+      src="/assets/placeholder.svg"
+      alt="Gallery image"
+      class="w-full h-auto max-h-[80vh] object-contain"
+    />
+    <div class="text-center mt-4">
+      <h3 id="modal-title" class="text-[#e9e70a] text-xl font-bold"></h3>
+      <p id="modal-date" class="text-white"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Contact CTA -->
+<section class="py-12 bg-black">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-2xl font-bold mb-6 text-[#e9e70a]">
+      ¿Quieres ser parte de nuestras próximas producciones?
+    </h2>
+    <p class="text-white mb-8 max-w-2xl mx-auto">
+      Únete a nuestros talleres y forma parte de la comunidad de Teatro
+      Serpiente.
+    </p>
+    <a
+      href="/#contact"
+      class="inline-block px-8 py-3 bg-[#e9e70a] text-black font-semibold rounded-md hover:bg-opacity-80 transition-colors"
+    >
+      Contáctanos
+    </a>
+  </div>
+</section>
+
+<script>
+  const galleryModal = document.getElementById("gallery-modal");
+  const modalImage = document.getElementById("modal-image") as HTMLImageElement;
+  const modalTitle = document.getElementById("modal-title");
+  const modalDate = document.getElementById("modal-date");
+  const closeModal = document.getElementById("close-modal");
+  const galleryItemInners = document.querySelectorAll(".gallery-item-inner");
+
+  galleryItemInners.forEach((item) => {
+    item.addEventListener("click", () => {
+      const title = item.getAttribute("data-title");
+      const date = item.getAttribute("data-date");
+      const imageSrc = item.getAttribute("data-image");
+      const imageAlt = item.getAttribute("data-alt");
+
+      if (!modalImage || !modalTitle || !modalDate || !galleryModal) return;
+
+      modalImage.src = imageSrc || "/assets/placeholder.svg";
+      modalImage.alt = imageAlt || "Gallery image";
+      modalTitle.textContent = title || "";
+      modalDate.textContent = date || "";
+
+      galleryModal.classList.remove("hidden");
+      galleryModal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  closeModal?.addEventListener("click", () => {
+    if (!galleryModal) return;
+    galleryModal.classList.add("hidden");
+    galleryModal.classList.remove("flex");
+    document.body.style.overflow = "auto";
+  });
+
+  galleryModal?.addEventListener("click", (e) => {
+    if (e.target === galleryModal) {
+      galleryModal.classList.add("hidden");
+      galleryModal.classList.remove("flex");
+      document.body.style.overflow = "auto";
+    }
+  });
+</script>

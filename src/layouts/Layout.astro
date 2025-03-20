@@ -1,11 +1,11 @@
 ---
 import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
 import NavBar from "@components/NavBar.astro";
 import "@fontsource-variable/big-shoulders-text";
 import "@fontsource/poiret-one";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
+import WhatsAppFloatingButton from "@components/WhatsAppFloatingButton.astro";
 ---
 
 <!doctype html>
@@ -34,11 +34,11 @@ import Analytics from "@vercel/analytics/astro";
   </head>
   <body>
     <NavBar />
-    <Header />
     <main>
       <slot />
       <SpeedInsights />
       <Analytics />
+      <WhatsAppFloatingButton />
     </main>
     <Footer />
   </body>

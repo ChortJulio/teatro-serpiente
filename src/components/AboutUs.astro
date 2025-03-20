@@ -1,3 +1,7 @@
+---
+import CONTACT_INFO from "@data/contactInfo";
+---
+
 <div id="about-us">
   <section class="pt-32 px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-screen-xl">
@@ -33,7 +37,7 @@
             talleres anuales de teatro, tenemos varios seminarios y talleres
             intensivos, que se dan en diferentes momentos del año. No tenemos
             fechas específicas de los talleres, vamos anunciando por <a
-              href="https://www.instagram.com/teatroserpiente/"
+              href={CONTACT_INFO.social.instagram}
               target="_blank"
               class="text-yellow_primary hover:underline"
               rel="noopener noreferrer">Instagram</a
